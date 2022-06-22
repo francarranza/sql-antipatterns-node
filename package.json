@@ -8,6 +8,7 @@
     "db:migrate": "npm run ley"
   },
   "dependencies": {
+    "@faker-js/faker": "^7.3.0",
     "@types/node": "^18.0.0",
     "dotenv": "^16.0.1",
     "ley": "^0.7.1",

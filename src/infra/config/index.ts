@@ -4,8 +4,8 @@ export type DbConfig = {
   host: string | undefined;
   password: string | undefined;
   port: number | undefined;
-  user: string | undefined;
-  name: string | undefined;
+  username: string | undefined;
+  database: string | undefined;
 }
 
 export type Config = {
@@ -17,7 +17,7 @@ export const config: Config = {
     host: process.env.DB_HOST,
     password: process.env.DB_PASSWORD,
     port: parseInt(process.env.DB_PORT || ''),
-    user: process.env.DB_USER,
-    name: process.env.DB_NAME,
+    username: process.env.DB_USER,
+    database: process.env.DB_NAME,
   }
 }

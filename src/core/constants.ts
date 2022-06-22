@@ -1,4 +1,4 @@
-module.exports.TableNames = {
+export const TableNames = {
   bugs: 'bugs',
   commentsAdj: 'comments_adj',
   commentsPathEnum: 'comments_path_enumeration',
