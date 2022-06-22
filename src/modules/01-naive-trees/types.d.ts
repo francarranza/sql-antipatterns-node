@@ -1,7 +1,7 @@
 export interface TreesBaseRepo {
   insert(comment: Comment): Promise<any>;
-  // getParents(): Promise<Comment[]>;
-  // getChildren(): Promise<Comment[]>;
+  getParent(comment_id: number): Promise<Comment>;
+  getChildren(comment_id: number): Promise<Comment[]>;
   // getAncestors(): Promise<Comment[]>;
   // getDescendants(): Promise<Comment[]>;
   // update(): Promise<Comment>;
