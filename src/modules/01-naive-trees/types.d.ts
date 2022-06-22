@@ -2,10 +2,10 @@ export interface TreesBaseRepo {
   insert(comment: Comment): Promise<any>;
   getParent(comment_id: number): Promise<Comment>;
   getChildren(comment_id: number): Promise<Comment[]>;
-  // getAncestors(): Promise<Comment[]>;
+  // getAncestors(comment_id: number, depth: number): Promise<Comment[]>;
   // getDescendants(): Promise<Comment[]>;
   // update(): Promise<Comment>;
-  // delete(): void;
+  // delete(comment_id: number): void;
 }
 
 export type Comment = {

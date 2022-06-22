@@ -5,6 +5,7 @@ import { AdjCommentRepo } from "./AdjacentList.repo";
 import { BugRepo } from "../Bug.repo";
 import { Comment } from "../types";
 import { TableNames } from "../../../core/constants";
+import { assert } from "console";
 
 async function main() {
 
@@ -69,11 +70,16 @@ async function main() {
   const parent = await adjCommentRepo.getParent(kukla2.comment_id);
   const children = await adjCommentRepo.getChildren(fran.comment_id);
 
-  console.log('parent')
-  console.log(parent)
+  console.log('getParent check')
+  assert(parent.comment_id == fran3.comment_id);
 
-  console.log('children')
-  console.log(children)
+  console.log('getChildren check')
+  assert(children[0].parent_id == fran.comment_id)
+
+  // TODO: Introduce mocha and chai for tests
+  // case delete leafnode
+  // case delete node with parents and children (promote)
+  // case delete together with all descendants (cascade)
 
   await db.end();
 }
