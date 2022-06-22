@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "ley": "ley --dir src/infra/db/migrations --length 2",
+    "db:migrate": "npm run ley"
+  },
   "dependencies": {
     "@types/node": "^18.0.0",
     "dotenv": "^16.0.1",
+    "ley": "^0.7.1",
     "postgres": "^3.2.4",
     "ts-node": "^10.8.1",
     "typescript": "^4.7.4"
