@@ -1,0 +1,12 @@
+version: '2'
+services:
+  postgres:
+    image: postgres:14.4
+    ports:
+    - "5442:5432"
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=db
+    volumes:
+      - /tmp/sql-antipatterns/db/postgres/data:/var/lib/postgresql/data
