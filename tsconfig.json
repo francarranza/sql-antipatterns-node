@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "pretty": true,
+    "inlineSourceMap": true,
+    "target": "es2019",
+    "outDir": "./dist",
+    "lib": [
+      "es6"
+    ],
+    "resolveJsonModule": true,
+    "types": [
+      "node"
+    ],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./@types"
+    ],
+    "esModuleInterop": true,
+  },
+  "include": [
+    "**/*.js",
+    "**/*.ts",
+    "**/*.spec.js",
+    "**/*.spec.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "!node_modules/@types",
+    "./dist/**/*"
+  ]
+}

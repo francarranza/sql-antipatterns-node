@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "ley": "ley --dir src/infra/db/migrations --length 2",
+    "ley": "ley --require ts-node/register --dir src/infra/db/migrations --length 2 --driver postgres",
     "db:migrate": "npm run ley"
   },
   "dependencies": {

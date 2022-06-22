@@ -1,6 +1,4 @@
 import postgres from 'postgres'
-import { DbConfig } from '../config';
+import { config } from '../config';
 
-export function getDatabase (config: DbConfig) {
-  return postgres(config)
-}
+export const db = postgres(config.db);
